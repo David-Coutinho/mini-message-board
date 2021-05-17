@@ -1,0 +1,9 @@
+h1 Submit form
+form(action="/new", method="post") 
+  //- put your inputs and buttons in here!
+  fieldset
+    label Name:
+      input(type="text", name="messageUser")
+    label Message:
+      textarea(name="messageText", cols="30", rows="10") 
+    button(type="submit") Submit

@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  //-
+    Loop through the messages array and for each one display the user,
+    text and the date the message was added.
+  each message in messages
+    p=  message.text + ' - by ' + message.user + ' at ' + message.added.getDate() + '/' + message.added.getMonth() + '/' + message.added.getFullYear()
+  a(href="http://localhost:3000/new") Create message 
